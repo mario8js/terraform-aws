@@ -1,0 +1,5 @@
+/home/mario/devops/unidade4/terraform-aws/.terraform
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl
+.terraform/providers/registry.terraform.io/hashicorp/aws/5.39.1/linux_amd64/terraform-provider-aws_v5.39.1_x5
