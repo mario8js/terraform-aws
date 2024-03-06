@@ -2,9 +2,9 @@
 provider "aws" {
     region  = "us-east-1"
     # acess key
-    access_key = "Access_key"
+    access_key = "AKIA3FLDZCIMT66BHKPC"
     # secret key
-    secret_key = "secret_key"
+    secret_key = "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"
 }
 
 # definindo a instancia
@@ -13,7 +13,7 @@ resource "aws_instance" "webserver" {
     instance_type = "t2.micro"
 
     security_groups = [aws_security_group.sg-030e6e47d157df14e.name]
-
+    key_name = aws_key_pair.pubkey.key_name
 
     tags = {
         "Name" = "Win-Webserver"
@@ -43,6 +43,11 @@ resource "aws_security_group" "sg-030e6e47d157df14e" {
         Name = "sg-Win-Webserver"
     }
 }
+
+resource "aws_key_pair" "pubkey" {
+    key_name = "demo_windows"
+    public_key = file("key/demo-key.pub")
+    }
 
 # EIP
 resource "aws_eip" "elasticip" {
