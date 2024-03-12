@@ -1,10 +1,10 @@
-# defindo o proveoor
+# defindo o provedor
 provider "aws" {
     region  = "us-east-1"
     # acess key
-    access_key = "AKIA3FLDZCIMT66BHKPC"
+    access_key = ""
     # secret key
-    secret_key = "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"
+    secret_key = ""
 }
 
 # definindo a instancia
